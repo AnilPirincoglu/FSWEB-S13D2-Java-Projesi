@@ -42,7 +42,8 @@ public class Main {
         for (int i = 2; i < highest; i++) {
             if (number % i == 0) {
                 total += i;
-                total += number / i;
+                if (i != number / i)
+                    total += number / i;
             }
         }
         return total == number;
@@ -88,9 +89,7 @@ public class Main {
                     result += " Nine";
                     break;
             }
-
         }
-
         return result.trim();
     }
 }
